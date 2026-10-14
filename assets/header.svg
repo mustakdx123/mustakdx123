@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-labelledby="title desc">
+  <title id="title">Mustakali MD: AI and IoT Developer</title>
+  <desc id="desc">Banner reading "Mustakali MD, AI and IoT Developer, Embedded Systems, ECE Student", with an ESP32 chip whose traces connect to sensors, ML, cloud and dashboard nodes.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050816"/>
+      <stop offset="0.55" stop-color="#0a1024"/>
+      <stop offset="1" stop-color="#0e0a26"/>
+    </linearGradient>
+    <radialGradient id="orbCyan">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orbViolet">
+      <stop offset="0" stop-color="#8b5cf6" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="nameFill" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#67e8f9"/>
+      <stop offset="0.5" stop-color="#60a5fa"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="gridFade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.15"/>
+      <stop offset="0.6" stop-color="#fff" stop-opacity="1"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#94a3b8" stroke-opacity="0.07"/>
+    </pattern>
+    <mask id="gridMask">
+      <rect width="1200" height="340" fill="url(#gridFade)"/>
+    </mask>
+    <clipPath id="frame">
+      <rect width="1200" height="340" rx="20"/>
+    </clipPath>
+    <clipPath id="terminal">
+      <rect x="64" y="248" width="560" height="44" rx="10"/>
+    </clipPath>
+  </defs>
+
+  <style>
+    .sans { font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; }
+    .mono { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace; }
+
+    .rise { animation: rise 0.9s cubic-bezier(.2,.7,.2,1) both; }
+    .d1 { animation-delay: 0.1s; }
+    .d2 { animation-delay: 0.25s; }
+    .d3 { animation-delay: 0.4s; }
+    @keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
+    .orb1 { animation: drift1 16s ease-in-out infinite; }
+    .orb2 { animation: drift2 19s ease-in-out infinite; }
+    @keyframes drift1 { 50% { transform: translate(-46px, 24px); } }
+    @keyframes drift2 { 50% { transform: translate(38px, -20px); } }
+
+    .pulse { stroke-dasharray: 14 100; stroke-dashoffset: 114; animation: flow 3.2s linear infinite; }
+    .pulse.b { animation-delay: 0.8s; }
+    .pulse.c { animation-delay: 1.6s; }
+    .pulse.e { animation-delay: 2.4s; }
+    @keyframes flow { from { stroke-dashoffset: 114; } to { stroke-dashoffset: 0; } }
+
+    .ping { transform-box: fill-box; transform-origin: center; animation: ping 3.2s ease-out infinite; opacity: 0; }
+    .ping.b { animation-delay: 0.8s; }
+    .ping.c { animation-delay: 1.6s; }
+    .ping.e { animation-delay: 2.4s; }
+    @keyframes ping { 0% { opacity: 0.7; transform: scale(1); } 70%, 100% { opacity: 0; transform: scale(2.6); } }
+
+    .core { animation: glow 3.2s ease-in-out infinite; }
+    @keyframes glow { 50% { stroke-opacity: 0.95; } }
+
+    /* Typing line: three phrases share a 12 s loop. Each cover group (cursor + mask)
+       slides right in character-sized steps to reveal its phrase. */
+    .p2, .p3 { opacity: 0; }
+    .p1 { animation: show1 12s infinite; }
+    .p2 { animation: show2 12s infinite; }
+    .p3 { animation: show3 12s infinite; }
+    @keyframes show1 { 0%, 31% { opacity: 1; } 32%, 100% { opacity: 0; } }
+    @keyframes show2 { 0%, 32% { opacity: 0; } 33%, 64% { opacity: 1; } 65%, 100% { opacity: 0; } }
+    @keyframes show3 { 0%, 65% { opacity: 0; } 66%, 98% { opacity: 1; } 99%, 100% { opacity: 0; } }
+
+    .c1 { transform: translateX(418px); animation: type1 12s infinite; }
+    .c2 { transform: translateX(388px); animation: type2 12s infinite; }
+    .c3 { transform: translateX(408px); animation: type3 12s infinite; }
+    .c1 { animation-timing-function: steps(41, end); }
+    .c2 { animation-timing-function: steps(38, end); }
+    .c3 { animation-timing-function: steps(40, end); }
+    @keyframes type1 { 0% { transform: translateX(0); } 14%, 100% { transform: translateX(418px); } }
+    @keyframes type2 { 0%, 33% { transform: translateX(0); } 46%, 100% { transform: translateX(388px); } }
+    @keyframes type3 { 0%, 66% { transform: translateX(0); } 79%, 100% { transform: translateX(408px); } }
+
+    .cursor { animation: blink 1s steps(1, end) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    @media (prefers-reduced-motion: reduce) {
+      .rise, .orb1, .orb2, .pulse, .ping, .core, .p1, .p2, .p3, .c1, .c2, .c3, .cursor { animation: none !important; }
+      .pulse, .ping { opacity: 0; }
+    }
+  </style>
+
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="340" fill="url(#bg)"/>
+    <rect width="1200" height="340" fill="url(#grid)" mask="url(#gridMask)"/>
+    <circle class="orb1" cx="1000" cy="40" r="280" fill="url(#orbViolet)"/>
+    <circle class="orb2" cx="760" cy="340" r="240" fill="url(#orbCyan)"/>
+
+    <!-- Circuit: sensors -> ESP32 -> cloud -> dashboard, plus an ML branch -->
+    <g fill="none" stroke="#334155" stroke-width="2" stroke-linejoin="round">
+      <path id="tSensors" d="M836 84 H876 V144 H920" pathLength="100"/>
+      <path id="tMl" d="M920 196 H876 V256 H836" pathLength="100"/>
+      <path id="tCloud" d="M1040 144 H1084 V84 H1124" pathLength="100"/>
+      <path id="tDash" d="M1040 196 H1084 V256 H1124" pathLength="100"/>
+    </g>
+    <g fill="none" stroke-width="2.5" stroke-linecap="round">
+      <path class="pulse" d="M836 84 H876 V144 H920" pathLength="100" stroke="#22d3ee"/>
+      <path class="pulse b" d="M1040 144 H1084 V84 H1124" pathLength="100" stroke="#60a5fa"/>
+      <path class="pulse c" d="M1040 196 H1084 V256 H1124" pathLength="100" stroke="#a78bfa"/>
+      <path class="pulse e" d="M920 196 H876 V256 H836" pathLength="100" stroke="#67e8f9"/>
+    </g>
+
+    <!-- ESP32 chip -->
+    <g>
+      <g fill="#475569">
+        <rect x="904" y="132" width="16" height="4" rx="1"/><rect x="904" y="152" width="16" height="4" rx="1"/>
+        <rect x="904" y="184" width="16" height="4" rx="1"/><rect x="904" y="204" width="16" height="4" rx="1"/>
+        <rect x="1040" y="132" width="16" height="4" rx="1"/><rect x="1040" y="152" width="16" height="4" rx="1"/>
+        <rect x="1040" y="184" width="16" height="4" rx="1"/><rect x="1040" y="204" width="16" height="4" rx="1"/>
+        <rect x="948" y="96" width="4" height="16" rx="1"/><rect x="978" y="96" width="4" height="16" rx="1"/><rect x="1008" y="96" width="4" height="16" rx="1"/>
+        <rect x="948" y="228" width="4" height="16" rx="1"/><rect x="978" y="228" width="4" height="16" rx="1"/><rect x="1008" y="228" width="4" height="16" rx="1"/>
+      </g>
+      <rect class="core" x="920" y="112" width="120" height="116" rx="14" fill="#0b1328" stroke="#22d3ee" stroke-opacity="0.45" stroke-width="1.5"/>
+      <rect x="936" y="128" width="88" height="84" rx="8" fill="none" stroke="#1e293b"/>
+      <text x="980" y="166" text-anchor="middle" class="mono" font-size="17" font-weight="700" fill="#e2e8f0">ESP32</text>
+      <text x="980" y="188" text-anchor="middle" class="mono" font-size="10" letter-spacing="2" fill="#64748b">EDGE NODE</text>
+    </g>
+
+    <!-- Endpoint nodes -->
+    <g>
+      <circle class="ping" cx="836" cy="84" r="6" fill="#22d3ee"/>
+      <circle class="ping e" cx="836" cy="256" r="6" fill="#67e8f9"/>
+      <circle class="ping b" cx="1124" cy="84" r="6" fill="#60a5fa"/>
+      <circle class="ping c" cx="1124" cy="256" r="6" fill="#a78bfa"/>
+      <circle cx="836" cy="84" r="6" fill="#0b1328" stroke="#22d3ee" stroke-width="2"/>
+      <circle cx="836" cy="256" r="6" fill="#0b1328" stroke="#67e8f9" stroke-width="2"/>
+      <circle cx="1124" cy="84" r="6" fill="#0b1328" stroke="#60a5fa" stroke-width="2"/>
+      <circle cx="1124" cy="256" r="6" fill="#0b1328" stroke="#a78bfa" stroke-width="2"/>
+    </g>
+    <g class="mono" font-size="11" letter-spacing="2" fill="#94a3b8" text-anchor="middle">
+      <text x="836" y="64">SENSORS</text>
+      <text x="836" y="284">ML</text>
+      <text x="1124" y="64">CLOUD</text>
+      <text x="1124" y="284">DASHBOARD</text>
+    </g>
+
+    <!-- Identity -->
+    <g class="rise d1">
+      <rect x="64" y="78" width="28" height="2" fill="#22d3ee"/>
+      <text x="104" y="84" class="mono" font-size="14" letter-spacing="4" fill="#22d3ee">HELLO, I'M</text>
+    </g>
+    <text class="sans rise d2" x="60" y="152" font-size="68" font-weight="800" letter-spacing="-1.5" fill="url(#nameFill)">Mustakali MD</text>
+    <text class="sans rise d3" x="64" y="206" font-size="23">
+      <tspan font-weight="600" fill="#e2e8f0">AI &amp; IoT Developer</tspan>
+      <tspan fill="#475569" dx="6">/</tspan>
+      <tspan fill="#94a3b8" dx="6">Embedded Systems</tspan>
+      <tspan fill="#475569" dx="6">/</tspan>
+      <tspan fill="#94a3b8" dx="6">ECE Student</tspan>
+    </text>
+
+    <!-- Terminal typing line -->
+    <g class="rise d3">
+      <rect x="64" y="248" width="560" height="44" rx="10" fill="#0b1328" stroke="#1e293b"/>
+      <text x="84" y="276" class="mono" font-size="17" fill="#22d3ee">$</text>
+      <g clip-path="url(#terminal)" class="mono" font-size="17" fill="#cbd5e1">
+        <g class="p1">
+          <text x="106" y="276" textLength="418" lengthAdjust="spacingAndGlyphs">building IoT systems with ESP32 + sensors</text>
+          <g class="c1"><rect class="cursor" x="106" y="262" width="10" height="20" fill="#22d3ee"/><rect x="116" y="252" width="520" height="36" fill="#0b1328"/></g>
+        </g>
+        <g class="p2">
+          <text x="106" y="276" textLength="388" lengthAdjust="spacingAndGlyphs">running ML models right in the browser</text>
+          <g class="c2"><rect class="cursor" x="106" y="262" width="10" height="20" fill="#a78bfa"/><rect x="116" y="252" width="520" height="36" fill="#0b1328"/></g>
+        </g>
+        <g class="p3">
+          <text x="106" y="276" textLength="408" lengthAdjust="spacingAndGlyphs">turning sensor data into live dashboards</text>
+          <g class="c3"><rect class="cursor" x="106" y="262" width="10" height="20" fill="#60a5fa"/><rect x="116" y="252" width="520" height="36" fill="#0b1328"/></g>
+        </g>
+      </g>
+    </g>
+  </g>
+  <rect x="0.5" y="0.5" width="1199" height="339" rx="19.5" fill="none" stroke="#1e293b"/>
+</svg>
